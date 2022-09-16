@@ -1,3 +1,9 @@
 ﻿<div class="container" @onclick="RedirectToProject">
-
+    <CardStatusHeader CardStatus="ProjectStatus"/>
+    <h1>@(ProjectName)</h1>
+    <div class="tagContainer">
+        @foreach(string tag in ProjectTags){
+            <div class="tag" style="background:@(FetchTagColor(tag))">@tag</div>
+        }
+    </div>
 </div>

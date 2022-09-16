@@ -7,9 +7,31 @@ namespace Portfolio.Shared.Components
         [Inject]
         protected NavigationManager NavManager { get; set; }
 
+        [Parameter]
+        public ProjectStatus ProjectStatus { get; set; }
+
+        [Parameter]
+        public string ProjectName { get; set; }
+
+        [Parameter]
+        public List<string> ProjectTags { get; set; } = new List<string>();
+
+        private readonly Dictionary<string, string> TagColorMap = new Dictionary<string, string>()
+        {
+            {"C#", "purple"},
+            {"C++", "pink"},
+            {"Unity", "blue"},
+            {"Unreal", "green"}
+        };
+
         protected void RedirectToProject() 
         {
             NavManager.NavigateTo("/outlineProject");
+        }
+
+        protected string FetchTagColor(string tag) 
+        {
+            return TagColorMap.ContainsKey(tag) ? TagColorMap[tag] : "grey";
         }
     }
 }
