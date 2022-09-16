@@ -18,10 +18,10 @@ namespace Portfolio.Shared.Components
 
         private readonly Dictionary<string, string> TagColorMap = new Dictionary<string, string>()
         {
-            {"C#", "purple"},
-            {"C++", "pink"},
-            {"Unity", "blue"},
-            {"Unreal", "green"}
+            {"C#", "var(--cs)"},
+            {"C++", "var(--cpp)"},
+            {"Unity", "var(--unity)"},
+            {"Unreal", "var(--unreal)"}
         };
 
         protected void RedirectToProject() 
@@ -31,7 +31,7 @@ namespace Portfolio.Shared.Components
 
         protected string FetchTagColor(string tag) 
         {
-            return TagColorMap.ContainsKey(tag) ? TagColorMap[tag] : "grey";
+            return TagColorMap.ContainsKey(tag) ? TagColorMap[tag] : "var(--defaultTag)";
         }
     }
 }

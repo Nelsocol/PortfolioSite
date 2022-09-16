@@ -16,9 +16,9 @@ namespace Portfolio.Shared.Components
         private string mStatusString { get; set; }
         private string mColor { get; set; }
         private readonly Dictionary<ProjectStatus, (string, string)> mDataReference = new Dictionary<ProjectStatus, (string, string)>(){
-            {ProjectStatus.COMPLETE, ("complete", "green")},
-            {ProjectStatus.IN_PROGRESS, ("in progress", "orange")},
-            {ProjectStatus.ONGOING, ("ongoing", "blue")}
+            {ProjectStatus.COMPLETE, ("COMPLETE", "var(--completed)")},
+            {ProjectStatus.IN_PROGRESS, ("IN PROGRESS", "var(--inprogress)")},
+            {ProjectStatus.ONGOING, ("ONGOING", "var(--ongoing)")}
         };
         
         protected override void OnInitialized()

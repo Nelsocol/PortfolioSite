@@ -41,3 +41,14 @@ p {
     margin-bottom: 20px;
 }
 
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: color ease-in-out 0.2s;
+}
+
+a:hover {
+    color: grey;
+}
+
