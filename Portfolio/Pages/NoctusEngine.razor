@@ -1,0 +1,110 @@
+﻿@page "/Noctus_Engine"
+
+<PageTitle>Noctus Engine</PageTitle>
+
+<div class="fixedContainer">
+    <HomeButton />
+
+    <h1>Noctus Engine</h1>
+
+    <div class="statusBanner complete">
+        <h3>Status: Complete</h3>
+        <h3>Github: <a href="https://github.com/Nelsocol/Noctus" target="_blank">https://github.com/Nelsocol/Noctus</a></h3>
+    </div>
+
+    <h2>Description</h2>
+
+    <p>
+        This was a spur of the moment short term side project design to help me learn more about the Lua Scripting.
+        The goal was not to create a game, but instead a simple game engine for producing richly-featured text based adventure games.
+        The project is effectively complete, though I may return to improve the UI at a later date.
+    </p>
+
+    <h2>Demonstrated Skills</h2>
+
+    <h3>Lua Scripting</h3>
+    <h3>C#</h3>
+    <h3>Windows Forms</h3>
+</div>
+<div class="mainContainer">
+    <h2>Project Goals</h2>
+
+    <p>
+        The project was spawned from a desire to learn more about how to integrate Lua Scripting into a codebase to allow users to define their own behavior and features.
+        It involved creating two projects, the Noctus Editor, which allows users to create and edit Noctus games, and the Noctus Player, which can execute Noctus games as a Console application. 
+        Noctus games are text based adventures, consisting of a regular pattern of text followed by choices that link the player to another node.
+        Both the links and the text of the passages can be dynamically altered or generated using custom Lua scripting utilities, and the user can also add raw Lua scripts to the project to extend functionality.
+    </p>
+
+    <h2>Project Outcomes</h2>
+
+    <p>
+        Over the course of about 2 weeks I constructed the project to all of its initial goals and objectives. 
+        While there are still plenty of ways to improve the project if I ever return to it, it does what I set out to do, and is effectively complete.
+        Using the final product, I'm able to create and play Noctus games, including custom Lua behaviors without any major bugs or difficulties.
+        Noctus games produced by the editor are 'compiled' into a single file with the .noctus extension, which the player takes in on startup.
+    </p>
+
+    <h2>Challenges</h2>
+
+    <p>
+        The biggest challenge in this project was just keeping the files produced by the editor syncronized and maintained. 
+        Each noctus node actually consists of 4 files. 
+        One file contains the text of the passage, the second contains the header metadata, the third contains any special Lua script attached to the node, and the fourth is a special file defining links to other nodes.
+        All four files are bundled into a single node by the editor, and making changes to any of the 4 editor panels has to effect the proper file in the background, saving automatically whenever the user switches which node they're editing or when they press Ctrl-S.
+        Making sure that this system didn't encounter desync issues was very challenging, and given a chance to repeat this process I likely would have bundled the data of all three files into one format (perhaps a single XML or JSON file) to avoid the confusion.
+    </p>
+
+    <p>
+        It was also a learning experience to learn enough about Lua scripting to be able to effectively integrate it into this project. 
+        I had to become very familiar not only with Lua syntax, but also the bindings which bridge Lua to .NET.
+    </p>
+
+    <h2>The Noctus Editor</h2>
+
+    <p>
+        The Noctus editor is a Windows Forms application which exists for a single purpose, to allow the user to easily produce well-structured .noctus files for the Noctus player.
+        It contains a node browser which allows the user to change what node they're editing. They can add new nodes, and also delete nodes from this menu. 
+        The other panels allow the user to edit the various files that comprise a Noctus 'node'.
+        As they make edits their changes are automatically saved to an unpacked temp folder, which is then compiled into a .noctus file anytime Ctrl-S or the Save menu is used.
+    </p>
+
+    <h2>The Noctus Player</h2>
+
+    <p>
+        The Noctus player, while less visual in nature, is the more complex of the two projects. It allows you to open and play .noctus files.
+        The player prints out the text of each node, dynamically resolving any injected Lua syntax or variables.
+        It then prints out any valid and available options, and allows the user to select one, redirecting flow to the related node and repeating the process.
+        All Lua is executed either when the relevant node is loaded, or on startup in the case of global Lua files.
+    </p>
+
+    <h2>Rich Lua-Text</h2>
+
+    <p>
+        Passages are defined using a custom syntax designed to be inherently powerful.
+        At its simplest, the passages can be written in pure plaintext with no special syntax. 
+        Using a few key flags, however, the user can easily inject single Lua variables, call Lua functions, execute inline Lua scripts, or insert the text of entirely different nodes!
+        For instance the text
+    </p>
+
+    <p>
+        "This sentence contains $variables $>passages ${functionValues()} and $[inlineCode()]"
+    </p>
+
+    <p>
+        Would evaluate each section after a '$' slightly differently, dynamically inserting the value of Lua variables, other nodes, and Lua function return values, or invisibly executing Lua code respectively.
+        All such evaluations function recursively, meaning an inserted passage will also have its Lua-Text syntax evaluated.
+    </p>
+
+    <h2>Included Lua Libraries</h2>
+
+    <p>
+        To increase the functionality of the tool, the editor includes several 'invisible' Lua scripts that cannot be edited through the editor directly.
+        These contain functions written by me that provide functions very useful for creating Lua-Text passages. 
+        For instance, the predefined pick_one(...) function can be inserted into Lua-Text to easily randomly insert one of several strings (or other values) into the passage.
+    </p>
+
+    <p>
+        These included Lua Libraries also define several useful datatypes, such as the NODE datatype, which represents a node in the game heirarchy and can be used to access metadata on the current node or others.
+    </p>
+</div>
