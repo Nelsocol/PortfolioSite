@@ -2,6 +2,14 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --completed: #3DD058;
+    --inprogress: #DD8930;
+    --ongoing: #2E56D4;
+    --cpp: #BF3F3F;
+    --cs: #EFB637;
+    --unity: #9C54BF;
+    --unreal: #93385F;
+    --defaultTag: #994869;
 }
 
 h1:focus {

@@ -1,0 +1,19 @@
+﻿button {
+    height: 40px;
+    width: 150px;
+    border: none;
+    outline: none;
+    font: normal 21px 'Nunito', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding-left: 35px;
+    text-align: left;
+
+    transition: padding ease-in-out 0.5s;
+}
+
+    button:hover {
+        padding-left: 15px;
+    }

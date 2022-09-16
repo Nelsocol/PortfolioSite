@@ -1,9 +1,31 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Collin's Portfolio</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="fixedContainer">
+    <h1>Collin Nelson</h1>
 
-Welcome to your new app.
+    <p>I'm a junior of Computer Science at Washington State University, a member of the WSU honors college, and passionate student of games programming and game development.</p>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <p>I have over 4 years of software industry experience programming for Schweitzer engineering laboratories, and am currently seeking opportunities for a long term career in the games industry.</p>
+
+    <p>Click on any of the cards on the right to browse my side projects. Or contact me with any of the links below.</p>
+
+    <p>You can also click <a href="img/Basic Resume.pdf" target="_blank">here</a> to view my downloadable PDF resume.</p>
+
+    <h2>Contact Links</h2>
+
+    <h3><b>Email:</b> <a href="mailto: collinnelson509@gmail.com">collinnelson509@gmail.com</a></h3>
+    <h3><b>Phone:</b> <a href="tel:+15093393505">+1 (509) 339 3505</a></h3>
+    <h3><b>Linkedin:</b> <a href="https://www.linkedin.com/in/collin-nelson-8b575a161" target="_blank">www.linkedin.com/in/collin-nelson-8b575a161</a></h3>
+</div>
+<div class="mainContainer">
+    <ProjectCard ProjectStatus="ProjectStatus.COMPLETE" ProjectName="Example Project" ProjectTags='new List<string>(){"C++", "Unreal", "C#", "Unity", "Unknown"}'/>
+    <ProjectCard ProjectStatus="ProjectStatus.COMPLETE" ProjectName="Example Project" ProjectTags='new List<string>(){"C#", "Unity"}' />
+    <ProjectCard ProjectStatus="ProjectStatus.ONGOING" ProjectName="Example Project" ProjectTags='new List<string>(){"C++", "Unreal"}' />
+    <ProjectCard ProjectStatus="ProjectStatus.ONGOING" ProjectName="Example Project"/>
+    <ProjectCard ProjectStatus="ProjectStatus.IN_PROGRESS" ProjectName="Example Project" ProjectTags='new List<string>(){"C#", "Unity"}' />
+    <ProjectCard ProjectStatus="ProjectStatus.ONGOING" ProjectName="Example Project" ProjectTags='new List<string>(){"C++", "Unreal"}' />
+    <ProjectCard ProjectStatus="ProjectStatus.IN_PROGRESS" ProjectName="Example Project" ProjectTags='new List<string>(){"C#", "Unity"}' />
+    <ProjectCard ProjectStatus="ProjectStatus.IN_PROGRESS" ProjectName="Example Project" ProjectTags='new List<string>(){"C++", "Unreal"}' />
+</div>

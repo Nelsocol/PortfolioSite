@@ -1,0 +1,54 @@
+﻿.mainContainer {
+    width: 50%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.fixedContainer {
+    width: 50%;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 50px;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 80px;
+}
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 21px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    transition: color ease-in-out 0.2s;
+}
+
+a:hover {
+    color: grey;
+}
+
