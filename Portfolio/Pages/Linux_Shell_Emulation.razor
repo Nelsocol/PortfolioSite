@@ -1,0 +1,81 @@
+﻿@page "/Linux_Shell_Emulation"
+
+<PageTitle>Linux Shell Emulation</PageTitle>
+
+<div class="fixedContainer">
+    <HomeButton />
+
+    <h1>Linux Shell Emulation</h1>
+
+    <div class="statusBanner complete">
+        <h3>Status: Complete</h3>
+        <h3>Github: <a href="https://github.com/" target="_blank">https://github.com/</a></h3>
+    </div>
+
+    <h2>Description</h2>
+
+    <p>
+        This project is the cumulative work for a class on systems programming. 
+        The project is done with one partner, and takes several months of work.
+        It involves recreating from scratch many of the core features of the linux shell, and requires not only a great deal of detailed C++ work, but also a deep understanding of the function of the linux OS.
+    </p>
+
+    <h2>Demonstrated Skills</h2>
+
+    <h3>C++</h3>
+    <h3>Linux</h3>
+    <h3>Teamwork</h3>
+</div>
+<div class="mainContainer">
+    <h2>Project Goals</h2>
+
+    <p>
+        The goal of the project is to recreate in large part the function of the linux command shell. 
+        This means managing the linux INODE system, navigating directories, piping, and performing file operations. 
+        These operations all must be performed to exact linux standards, as the emulated shell must be able to mount and edit a virtual disk in such a way that the disk can then be remounted to the real linux operating system and used.
+        Almost any mistake in understanding or methodology in working with the raw vdisk file will lead to data corruption that will prevent the disk from functioning in the real Linux OS.
+    </p>
+
+    <h2>Project Outcomes</h2>
+
+    <p>
+        This project is considered immensely challenging in our major, and most students complete part of the project, but have to leave certain requirements unfulfilled by the turn in date.
+        This is an anticipated part of the assignment, due to the scope of it, and the very dense and detail oriented nature of the work. 
+        That being said, my partner and I successfully accomplished every component of the assignment with perfect accuracy. 
+        The full sequence of events we had to execute to receive full points is available in the README of the project.
+    </p>
+
+    <h2>Challenges</h2>
+
+    <p>
+        This project was a host of challenges from beginning to end. 
+        Although the previous assignments in this class helped to prepare us for this work, it was still an incredibly dense assignment. 
+        The Linux operating system is naturally very complex, and very specific in the way that it handles data. 
+        This specificity is useful in maintaining a standard, but also means that a great deal of study is required to understand the system well enough to interface with it.
+    </p>
+
+    <h2>Feature Highlights</h2>
+
+    <h4>File Operations</h4>
+
+    <p>
+        The first phase of the project involved implementation of the mkdir, cd, creat, link, unlink, symlink, and rmdir functions of the Linux shell.
+        This required an understanding of the Linux INODE system, and how nodes in the directory connect, link, and store the data that represents files and directories.
+        The most challenging aspects, the creation and removal functions, needed to take great care not to corrupt any aspect of the INODE structure.
+    </p>
+
+    <h4>Data Operations</h4>
+
+    <p>
+        The second phase of the project was to reproduce the cat and cp functions of the linux file system. 
+        Both required not only the knowledge and functions from the previous phase, but also an understanding of how to access the raw data stored in a vdisk. 
+        In order to receive credit for the functionality, the results produced by our emulated functions must be exactly identical to the results of the official Linux functionality.
+    </p>
+
+    <h4>Mounting Operations</h4>
+
+    <p>
+        The final phase of the project involved implementing the ability to mount and unmount other vdisks to the file system in our shell emulation. 
+        This not only required us to ensure that one can cross mounting points when navigating the file system, but also that all other implemented features can correctly traverse mounting points.
+    </p>
+</div>

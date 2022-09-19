@@ -1,13 +1,18 @@
 ﻿.mainContainer {
-    width: 50%;
+    width: 60%;
     margin: 0;
     position: absolute;
     top: 0;
     right: 0;
+    padding: 80px;
 }
 
+    .mainContainer h2 {
+        margin-top: 50px;
+    }
+
 .fixedContainer {
-    width: 50%;
+    width: 40%;
     margin: 0;
     position: fixed;
     top: 0;

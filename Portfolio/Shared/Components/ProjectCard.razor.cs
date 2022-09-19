@@ -26,7 +26,8 @@ namespace Portfolio.Shared.Components
 
         protected void RedirectToProject() 
         {
-            NavManager.NavigateTo("/outlineProject");
+            string projectUrl = ProjectName.Replace(' ', '_');
+            NavManager.NavigateTo($"/{projectUrl}");
         }
 
         protected string FetchTagColor(string tag) 

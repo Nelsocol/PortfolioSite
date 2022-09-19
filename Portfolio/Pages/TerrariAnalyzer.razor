@@ -1,0 +1,63 @@
+﻿@page "/Terraria_Analyzer"
+
+<PageTitle>TerrariAnalyzer</PageTitle>
+
+<div class="fixedContainer">
+    <HomeButton />
+
+    <h1>TerrariAnalyzer</h1>
+
+    <div class="statusBanner complete">
+        <h3>Status: Complete</h3>
+        <h3>Github: <a href="https://github.com/Nelsocol/Artifission" target="_blank">https://github.com/Nelsocol/Artifission</a></h3>
+    </div>
+
+    <h2>Description</h2>
+
+    <p>
+        TerrariAnalyzer was a small datamining project constructed in two weeks for a class. 
+        The project mines data from a Terraria world save to analyze the save for insights. 
+        In many ways it can be viewed as a simplified version of the <a href="https://terramap.github.io/" target="_blank">TerraMap</a> tool.
+    </p>
+
+    <h2>Demonstrated Skills</h2>
+
+    <h3>C#</h3>
+    <h3>Windows Forms</h3>
+    <h3>Data Processing</h3>
+</div>
+<div class="mainContainer">
+    <h2>Project Goals</h2>
+
+    <p>
+        The only requirement outlined by the assignment for this project was to mine some form of data for useful insights that would be otherwise inaccesible. 
+        I decided that my chosen data source would be the world files of the game Terraria.
+        In order to accomplish my goals, I would need to find out how Terraria saves are structured, reverse engineer that data, and mine from it useful insights.
+    </p>
+
+    <h2>Project Outcomes</h2>
+
+    <p>
+        In the end, I was able to construct an app with three tabs, each highlighting a different type of insight mined from the world save. 
+        The first tab allows the user to select any of the game's valid tiles, and view a graph of that tile's distribution by depth for the entire map.
+        The second allows a user to search for any valid item in the game, and receive the coordinates and relative positions of every chest in the game world which contains that item, and the third provides some general insights about the world save.
+    </p>
+
+    <p>
+        If I ever return to the project, I would first aim to improve the UI. I made the choice to use Windows Forms for the project to make the construction of the frontend as rapid as possible.
+        I would also love to improve the thoroughness of the save file deconstructions. 
+        In the current design I skip over data in the file that I wouldn't need for my project (i.e. which bosses have been killed and how many of each enemy have been slain). 
+        I would enjoy completing that section of the code to cleanly load all of the data instead of only what was needed.
+
+    </p>
+
+    <h2>Challenges</h2>
+
+    <p>
+        The most notable challenge in this project was not the programming, but the research. 
+        In order to find insights in the Terraria world save, I first had to research how Terraria stores their save data, including compression methods. 
+        The save files weren't in any standardized format, and as such I had to carefully manually read the binary data and reconstitute it into a C# data structure.
+        The most powerful and useful reference for the binary format is this excellent document from <a href="https://seancode.com/terrafirma/world.html" target="_blank">seancode.com</a>.
+        Even with this resource, however, it took a great deal of study, research, and careful methodical programming to decode the binary data manually into a usable C# structure.
+    </p>
+</div>

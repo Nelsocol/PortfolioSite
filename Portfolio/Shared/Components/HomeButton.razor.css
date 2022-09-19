@@ -7,9 +7,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    background: transparent;
+    background: white;
     padding-left: 35px;
     text-align: left;
+    border-radius: 5px;
 
     transition: padding ease-in-out 0.5s;
 }
