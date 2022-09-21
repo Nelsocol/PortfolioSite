@@ -5,7 +5,7 @@ namespace Portfolio.Shared.Components
     public enum ProjectStatus { 
         COMPLETE,
         IN_PROGRESS,
-        ONGOING
+        ACTIVE
     }
 
     public partial class CardStatusHeader
@@ -18,7 +18,7 @@ namespace Portfolio.Shared.Components
         private readonly Dictionary<ProjectStatus, (string, string)> mDataReference = new Dictionary<ProjectStatus, (string, string)>(){
             {ProjectStatus.COMPLETE, ("COMPLETE", "var(--completed)")},
             {ProjectStatus.IN_PROGRESS, ("IN PROGRESS", "var(--inprogress)")},
-            {ProjectStatus.ONGOING, ("ONGOING", "var(--ongoing)")}
+            {ProjectStatus.ACTIVE, ("ACTIVE", "var(--active)")}
         };
         
         protected override void OnInitialized()

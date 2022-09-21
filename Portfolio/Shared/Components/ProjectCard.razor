@@ -3,7 +3,8 @@
     <h1>@(ProjectName)</h1>
     <div class="tagContainer">
         @foreach(string tag in ProjectTags){
-            <div class="tag" style="color:@(FetchTagColor(tag)); border: 2px solid @(FetchTagColor(tag))">@tag</div>
+            var tagColor = FetchTagColor(tag);
+            <div class="tag" style="color:@(tagColor); border: 2px solid @(tagColor)">@tag</div>
         }
     </div>
 </div>

@@ -2,9 +2,9 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --completed: #3DD058;
-    --inprogress: #DD8930;
-    --ongoing: #2E56D4;
+    --completed: #66C16D;
+    --inprogress: #BE6C51;
+    --active: #5178BE;
     --cpp: #BF3F3F;
     --cs: #EFB637;
     --unity: #9C54BF;
@@ -66,8 +66,8 @@ li {
         background: var(--inprogress);
     }
 
-    .statusBanner.ongoing {
-        background: var(--ongoing);
+    .statusBanner.active {
+        background: var(--active);
     }
 
     .statusBanner h3 {

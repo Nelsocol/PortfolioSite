@@ -1,11 +1,17 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Portfolio.Library;
+using System.Security.Cryptography;
 
 namespace Portfolio.Shared.Components
 {
     public partial class ProjectCard
     {
         [Inject]
-        protected NavigationManager NavManager { get; set; }
+        protected NavigationManager mNavManager { get; set; }
+
+        [Inject]
+        protected IProvideColors mColorProvider { get; set; }
+
 
         [Parameter]
         public ProjectStatus ProjectStatus { get; set; }
@@ -16,23 +22,17 @@ namespace Portfolio.Shared.Components
         [Parameter]
         public List<string> ProjectTags { get; set; } = new List<string>();
 
-        private readonly Dictionary<string, string> TagColorMap = new Dictionary<string, string>()
-        {
-            {"C#", "var(--cs)"},
-            {"C++", "var(--cpp)"},
-            {"Unity", "var(--unity)"},
-            {"Unreal", "var(--unreal)"}
-        };
+        private readonly Dictionary<string, string> TagColorMap = new Dictionary<string, string>();
 
         protected void RedirectToProject() 
         {
             string projectUrl = ProjectName.Replace(' ', '_');
-            NavManager.NavigateTo($"/{projectUrl}");
+            mNavManager.NavigateTo($"/{projectUrl}");
         }
 
         protected string FetchTagColor(string tag) 
         {
-            return TagColorMap.ContainsKey(tag) ? TagColorMap[tag] : "var(--defaultTag)";
+            return mColorProvider.FetchCSSColor(tag);
         }
     }
 }
