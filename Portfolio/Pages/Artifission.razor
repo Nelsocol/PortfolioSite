@@ -7,8 +7,8 @@
 
     <h1>Artifission</h1>
 
-    <div class="statusBanner ongoing">
-        <h3>Status: Ongoing</h3>
+    <div class="statusBanner active">
+        <h3>Status: Active</h3>
         <h3>Github: <a href="https://github.com/Nelsocol/Artifission" target="_blank">https://github.com/Nelsocol/Artifission</a></h3>
     </div>
 
@@ -16,8 +16,8 @@
 
     <p>
         Artifission is an action-platformer designed around the idea of fighting using custom spells created through an open-ended spell creation framework.
-        I began casual work on it in my freshman year of college, and progress is still ongoing. 
-        Although much of the game's content is unfinished, the main mechanics of spell creation, combat, and platforming are fully implemented.
+        I began casual work on it in my freshman year of college, and it still receives active work between other more pressing projects. 
+        Although much of the game's content (i.e. art and sound) is unfinished, the main mechanics of spell creation, combat, and platforming are fully implemented.
     </p>
 
     <h2>Major Skills</h2>
@@ -31,19 +31,20 @@
     <h2>Project Goals</h2>
 
     <p>
-        When I set out to create Artifission, it was based on an idea given to me many years ago by a programming mentor of mine. 
-        That idea was to create a game where the player could create their own spells, combing forms, effects, and chain reactions to produce totally custom attacks and utilities.
-        I settled on an action-platformer as an ideal and approachable style of gameplay for this core mechanic, and also refined that core mechanic into the form it currently takes.
-        Each spell should consist of one "form", and one "effect" which combine programatically to produce novel and interesting spell effects. 
-        Enemies should encourage the player to adapt and reshape their spells to tackle a variety of unique challenges.
+        When I set out to create Artifission, I based it on an idea given to me many years ago by a programming mentor of mine. 
+        That idea was to create a game where the player could create their own spells, combining forms, effects, and chain reactions to produce custom attacks and utilities. 
+        I settled on an action-platformer as an ideal and approachable style of gameplay for this core mechanic, and also refined that core mechanic into the form it currently takes. 
+        Each spell consists of one "form", and one "effect", which combine dynamically to produce novel and interesting spell effects. 
+        Meanwhile, enemies and platforming encourage the player to adapt and reshape their spells to tackle a variety of unique challenges.
+
     </p>
 
     <h2>Current State</h2>
 
     <p>
-        Currently, Artifission is still my go-to project when I don't have any more pressing or useful side projects.
+        Currently, Artifission is my go-to project when I don't have any more pressing or useful side projects.
         I define it as being generally 'feature complete'.
-        While it would still take quite a bit of work to turn Artifission into a releasable game, it has a demo playground to experiement with mechanics in, and all of the important mechanics are fully implemented.
+        While it would still take quite a bit of work to turn Artifission into a releasable game, it has a demo environment to experiement with mechanics in, and all of the important mechanics are fully implemented.
         This includes the fully integrated spell system, status effects, enemy AI state-machines, platforming physics, enemy loading and deloading, player death, and camera controls for cutscenes. 
         To complete the game I would need the time to add additional enemies, environments and a number of small incidental features.
     </p>
@@ -53,12 +54,13 @@
     <p>This project was a major learning experience for me. 
        I decided early on that I was not going to use the Unity Asset Store for any aspect of the game, nor was I going to rely too much on pre-built utilities to solve even common problems like building enemy AI state machines. 
        Instead I would learn how such systems are designed and build them all myself, or I would invent my own solutions from scratch. 
-       This meant teaching myself pixel art, including animation, and it also meant learning a lot about how to effectively create features and systems to work within the Unity Framework effectively.
+       This meant teaching myself pixel art, including animation, and it also meant learning a lot about how to effectively create features and systems to work within the Unity Framework efficiently.
+       
     </p>
 
     <p>
         In addition, I had to be very judicious with controlling the scope of the features and ideas that I committed to while building the project.
-        With no definitive end-date, and no spec other than my own ideas, it would very easy to allow my ideas to grow beyond my ability to construct, and to leave a lot of hanging features unfinished.
+        With no definitive end-date, and no spec other than my own ideas, it would very easy to allow the project concept to grow beyond my ability to construct, and to leave a lot of hanging features unfinished.
         Instead, I was very specific with ensuring that each feature was required, had a purpose, and contributed to my final vision for the game.
     </p>
 
@@ -94,6 +96,6 @@
         It works by defining a set of GameObject decorators that can be attached to any GameObject with the correct bindings (This includes all creatures, and applies automatically to both the player and enemies).
         The status effect object is then automatically detected, and its effects are applied continuously until it expires, at which point the object is destroyed. 
         New status effects can be created by producing a new GameObject with a StatusEffect script and attaching it to any creature.
-        The generic bindings then ensure that while the player and enemies don't handle damage events in the same way, they can still utilize the same library of consistent status effects.
+        The generic bindings ensure that while the player and enemies don't handle damage events in the same way, they can still utilize the same library of consistent status effects.
     </p>
 </div>
