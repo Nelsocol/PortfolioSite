@@ -1,10 +1,12 @@
-﻿<div class="container" @onclick="RedirectToProject">
-    <CardStatusHeader CardStatus="ProjectStatus"/>
-    <h1>@(ProjectName)</h1>
-    <div class="tagContainer">
-        @foreach(string tag in ProjectTags){
-            var tagColor = FetchTagColor(tag);
-            <div class="tag" style="color:@(tagColor); border: 2px solid @(tagColor)">@tag</div>
-        }
+﻿<div class="container" @onclick="RedirectToProject" style="background-image: url(@(TeaserImage));">
+    <div class="container-background">
+        <CardStatusHeader CardStatus="ProjectStatus"/>
+        <h1>@(ProjectName)</h1>
+        <div class="tagContainer">
+            @foreach(string tag in ProjectTags){
+                var tagColor = FetchTagColor(tag);
+                <div class="tag" style="color:@(tagColor); border: 2px solid @(tagColor)">@tag</div>
+            }
+        </div>
     </div>
 </div>
