@@ -22,6 +22,9 @@ namespace Portfolio.Shared.Components
         [Parameter]
         public List<string> ProjectTags { get; set; } = new List<string>();
 
+        [Parameter]
+        public string TeaserImage { get; set; }
+
         private readonly Dictionary<string, string> TagColorMap = new Dictionary<string, string>();
 
         protected void RedirectToProject() 
