@@ -9,7 +9,7 @@
 
     <div class="statusBanner complete">
         <h3>Status: Complete</h3>
-        <h3>Github: <a href="https://github.com/Nelsocol/Artifission" target="_blank">https://github.com/Nelsocol/Artifission</a></h3>
+        <h3>Github: <a href="https://github.com/WSUCollinNelson/Terrarianalyzer" target="_blank">https://github.com/WSUCollinNelson/Terrarianalyzer</a></h3>
     </div>
 
     <h2>Description</h2>
@@ -33,7 +33,7 @@
     <p>
         The only requirement outlined by the assignment for this project was to mine some form of data for useful insights that would be otherwise inaccesible. 
         I decided that my chosen data source would be the world files of the game Terraria.
-        In order to accomplish my goals, I would need to find out how Terraria saves are structured, reverse engineer that data, and mine from it useful insights.
+        In order to accomplish my goals, I would need to find out how Terraria saves are structured, <a href="https://github.com/WSUCollinNelson/Terrarianalyzer/blob/main/Terrarianalyzer/Terrarianalyzer/ObjectRepresentations/WorldObject.cs" target="_blank">reverse engineer that data</a>, and mine from it useful insights.
     </p>
 
     <h2>Project Outcomes</h2>
@@ -59,6 +59,6 @@
         In order to find insights in the Terraria world save, I first had to research how Terraria stores their save data, including compression methods. 
         The save files weren't in any standardized format, and as such I had to carefully manually read the binary data and reconstitute it into a C# data structure.
         The most powerful and useful reference for the binary format is this excellent document from <a href="https://seancode.com/terrafirma/world.html" target="_blank">seancode.com</a>.
-        Even with this resource, however, it took a great deal of study, research, and careful methodical programming to decode the binary data manually into a usable C# structure.
+        Even with this resource, however, it took a great deal of study, research, and careful methodical programming to decode the <a href="https://github.com/WSUCollinNelson/Terrarianalyzer/blob/main/Terrarianalyzer/Terrarianalyzer/StaticUtilities/ByteReaderUtilities.cs" target="_blank">binary data manually</a> into a usable C# structure.
     </p>
 </div>

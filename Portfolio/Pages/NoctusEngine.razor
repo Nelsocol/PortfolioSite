@@ -32,7 +32,7 @@
 
     <p>
         The project was spawned from a desire to learn more about how to integrate Lua Scripting into a codebase to allow users to define their own behavior and features.
-        It involved creating two projects, the Noctus Editor, which allows users to create and edit Noctus games, and the Noctus Player, which can execute Noctus games as a Console application. 
+        It involved creating two projects, the <a href="https://github.com/Nelsocol/Noctus/tree/main/NoctusEditor" target="_blank">Noctus Editor</a>, which allows users to create and edit Noctus games, and the <a href="https://github.com/Nelsocol/Noctus/tree/main/NoctusEngine" target="_blank">Noctus Player</a>, which can execute Noctus games as a Console application.
         Noctus games are text based adventures, consisting of a regular pattern of text followed by choices that link the player to another node.
         Both the links and the text of the passages can be dynamically altered or generated using custom Lua scripting utilities, and the user can also add raw Lua scripts to the project to extend functionality.
     </p>
@@ -50,7 +50,7 @@
 
     <p>
         The biggest challenge in this project was just keeping the files produced by the editor syncronized and maintained. 
-        Each noctus node actually consists of 4 files. 
+        Each <a href="https://github.com/Nelsocol/Noctus/tree/main/game/.nodes" target="_blank">noctus node</a> actually consists of 4 files.
         One file contains the text of the passage, the second contains the header metadata, the third contains any special Lua script attached to the node, and the fourth is a special file defining links to other nodes.
         All four files are bundled into a single node by the editor, and making changes to any of the 4 editor panels has to effect the proper file in the background, saving automatically whenever the user switches which node they're editing or when they press Ctrl-S.
         Making sure that this system didn't encounter desync issues was very challenging, and given a chance to repeat this process I likely would have bundled the data of all three files into one format (perhaps a single XML or JSON file) to avoid the confusion.
@@ -74,7 +74,7 @@
 
     <p>
         The Noctus player, while less visual in nature, is the more complex of the two projects. It allows you to open and play .noctus files.
-        The player prints out the text of each node, dynamically resolving any injected Lua syntax or variables.
+        The player prints out the text of each node, <a href="https://github.com/Nelsocol/Noctus/blob/main/NoctusEngine/NoctusTextParser.cs" target="_blank">dynamically resolving</a> any injected Lua syntax or variables.
         It then prints out any valid and available options, and allows the user to select one, redirecting flow to the related node and repeating the process.
         All Lua is executed either when the relevant node is loaded, or on startup in the case of global Lua files.
     </p>
@@ -88,9 +88,9 @@
         For instance the text
     </p>
 
-    <p>
+    <h3>
         "This sentence contains $variables $>passages ${functionValues()} and $[inlineCode()]"
-    </p>
+    </h3>
 
     <p>
         Would evaluate each section after a '$' slightly differently, dynamically inserting the value of Lua variables, other nodes, and Lua function return values, or invisibly executing Lua code respectively.
@@ -100,7 +100,7 @@
     <h2>Included Lua Libraries</h2>
 
     <p>
-        To increase the functionality of the tool, the editor includes several 'invisible' Lua scripts that cannot be edited through the editor directly.
+        To increase the functionality of the tool, the editor includes several 'invisible' <a href="https://github.com/Nelsocol/Noctus/tree/main/game/.noctus_libraries" target="_blank">Lua scripts</a> that cannot be edited through the editor directly.
         These contain functions written by me that provide functions very useful for creating Lua-Text passages. 
         For instance, the predefined pick_one(...) function can be inserted into Lua-Text to easily randomly insert one of several strings (or other values) into the passage.
     </p>

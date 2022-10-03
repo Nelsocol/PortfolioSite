@@ -46,7 +46,14 @@
         Currently, Artifission is my go-to project when I don't have any more pressing or useful side projects.
         I define it as being generally 'feature complete'.
         While it would still take quite a bit of work to turn Artifission into a releasable game, it has a demo environment to experiement with mechanics in, and all of the important mechanics are fully implemented.
-        This includes the fully integrated spell system, status effects, enemy AI state-machines, platforming physics, enemy loading and deloading, player death, and camera controls for cutscenes. 
+        This includes the fully integrated
+        <a href="https://github.com/Nelsocol/Artifission/tree/main/Artifission/Assets/SpellFramework" target="_blank">spell system</a>, 
+        <a href="https://github.com/Nelsocol/Artifission/tree/main/Artifission/Assets/SpellFramework/StatusEffects" target="_blank">status effects</a>, 
+        <a href="https://github.com/Nelsocol/Artifission/tree/main/Artifission/Assets/Enemies/AIFramework" target="_blank">enemy AI state machines</a>, 
+        platforming physics,
+        <a href="https://github.com/Nelsocol/Artifission/tree/main/Artifission/Assets/Enemies/Director" target="_blank">enemy loading and de-loading</a>, 
+        player death, and 
+        <a href="https://github.com/Nelsocol/Artifission/tree/main/Artifission/Assets/CutsceneController" target="_blank">camera controls</a> for cutscenes.
         To complete the game I would need the time to add additional enemies, environments and a number of small incidental features.
     </p>
 
@@ -70,7 +77,7 @@
     <h4>Enemy State Machines</h4>
 
     <p>
-        I built from scratch my own system in Unity for managing and controlling enemy state machines. 
+        I built from scratch my own system in Unity for managing and controlling enemy <a href="https://github.com/Nelsocol/Artifission/tree/main/Artifission/Assets/Enemies/AIFramework" target="_blank">state machines</a>.
         In this system, I can drag and drop a generic CreatureBrain object onto an enemy NPC, and then seperately attach any number of isolated Behavior scripts that define the enemy's behavior in a particular state.
         The brain manages transitions between these states and allows certain states (such as a 'stun' state) to interrupt the existing state and steal control under particular conditions.
     </p>
@@ -78,7 +85,7 @@
     <h4>Spell System</h4>
 
     <p>
-        The spell system is one of the most developed mechanics in the game, and in many ways is the heart and soul of the project. 
+        The <a href="https://github.com/Nelsocol/Artifission/tree/main/Artifission/Assets/SpellFramework" target="_blank">spell framework</a> is one of the most developed mechanics in the game, and in many ways is the heart and soul of the project.
         In the code, each spell is the marriage of two interface implementations. 
         An implementation of the spell form interface accepts an implementation of the spell effect interface. 
         They then work together to produce a unfied set of behaviors, status effects, and damage properties. 
@@ -93,10 +100,10 @@
     <h4>Status Effects</h4>
 
     <p>
-        The status effects system, an offshoot of the spell system, is a mechanic I am particularly proud of.
+        The <a href="https://github.com/Nelsocol/Artifission/tree/main/Artifission/Assets/SpellFramework/StatusEffects" target="_blank">status effects system</a>, an offshoot of the spell system, is a mechanic I am particularly proud of.
         It works by defining a set of GameObject decorators that can be attached to any GameObject with the correct bindings (This includes all creatures, and applies automatically to both the player and enemies).
         The status effect object is then automatically detected, and its effects are applied continuously until it expires, at which point the object is destroyed. 
         New status effects can be created by producing a new GameObject with a StatusEffect script and attaching it to any creature.
-        The generic bindings ensure that while the player and enemies don't handle damage events in the same way, they can still utilize the same library of consistent status effects.
+        The <a href="https://github.com/Nelsocol/Artifission/tree/main/Artifission/Assets/Enemies" target="_blank">Universal Creature Bindings</a> ensure that while the player and enemies don't handle damage events in the same way, they can still utilize the same library of consistent status effects.
     </p>
 </div>

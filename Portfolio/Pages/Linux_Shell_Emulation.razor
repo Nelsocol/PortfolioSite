@@ -60,7 +60,7 @@
     <h4>File Operations</h4>
 
     <p>
-        The first phase of the project involved implementation of the mkdir, cd, creat, link, unlink, symlink, and rmdir functions of the Linux shell.
+        The first phase of the project involved <a href="https://github.com/WSUCollinNelson/LinuxShellEmulation/blob/main/mkdir_creat.c" target="_blank">implementation</a> of the mkdir, cd, creat, link, unlink, symlink, and rmdir functions of the Linux shell.
         This required an understanding of the Linux INODE system, and how nodes in the directory connect, link, and store the data that represents files and directories.
         The most challenging aspects, the creation and removal functions, needed to take great care not to corrupt any aspect of the INODE structure.
     </p>
@@ -68,7 +68,7 @@
     <h4>Data Operations</h4>
 
     <p>
-        The second phase of the project was to reproduce the cat and cp functions of the linux file system. 
+        The <a href="https://github.com/WSUCollinNelson/LinuxShellEmulation/blob/main/read_cat.c" target="_blank">second phase</a> of the project was to reproduce the cat and cp functions of the linux file system.
         Both required not only the knowledge and functions from the previous phase, but also an understanding of how to access the raw data stored in a vdisk. 
         In order to receive credit for the functionality, the results produced by our emulated functions must be exactly identical to the results of the official Linux functionality.
     </p>
@@ -76,7 +76,7 @@
     <h4>Mounting Operations</h4>
 
     <p>
-        The final phase of the project involved implementing the ability to mount and unmount other vdisks to the file system in our shell emulation. 
+        The final phase of the project involved implementing the ability to <a href="https://github.com/WSUCollinNelson/LinuxShellEmulation/blob/main/mount_umount.c" target="_blank">mount and unmount</a> other vdisks to the file system in our shell emulation.
         This not only required us to ensure that one can cross mounting points when navigating the file system, but also that all other implemented features can correctly traverse mounting points.
     </p>
 </div>
